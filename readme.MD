@@ -16,7 +16,7 @@
 
 # Créditos
 * Gracias a quienes, a lo largo de mi trayectoria profesional, me han hecho llegar sus opiniones para mejorar.
-* En especial a: [Jorge Arco](https://github.com/jorge07) por la inestimable ayuda para resolver ciertas incidencias.
+* En especial a: [Jorge Arco](https://github.com/jorge07) por la inestimable ayuda para resolver ciertas incidencias y por su excelente repositorio.
 
 # Licencia
 #### * [Licencia de este proyecto](./LICENSE)
