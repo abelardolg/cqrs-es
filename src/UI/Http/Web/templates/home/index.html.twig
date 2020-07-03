@@ -1,0 +1,29 @@
+{% extends '/home/base.html.twig' %}
+{% block content %}
+<!-- Content area -->
+<div class="content">
+    <div class="text-center">
+        <a href="{{ path('sign-up') }}" target="_blank">
+            <h2> Entrar </h2>
+        </a>
+    </div>
+
+    </div>
+    </div>
+    </div>
+    <!-- /user details (with sample pattern) -->
+
+    {% block javascripts %}
+        {{ parent() }}
+        <script src="{{ asset('global_assets/js/plugins/extensions/jquery_ui/widgets.min.js') }} "></script>
+        <script src="{{ asset('global_assets/js/plugins/visualization/d3/d3.min.js') }} "></script>
+        <script src="{{ asset('global_assets/js/plugins/uploaders/dropzone.min.js') }} "></script>
+        <script src="{{ asset('global_assets/js/plugins/forms/styling/uniform.min.js') }} "></script>
+        <script src="{{ asset('global_assets/js/plugins/forms/styling/switchery.min.js') }} "></script>
+        <script src="{{ asset('global_assets/js/plugins/forms/selects/select2.min.js') }} "></script>
+        <script src="{{ asset('dark/assets/js/app.js') }} "></script>
+        <script src="{{ asset('global_assets/js/demo_pages/widgets_content.js') }} "></script>
+        <!-- /theme JS files -->
+
+    {% endblock %}
+{% endblock %}

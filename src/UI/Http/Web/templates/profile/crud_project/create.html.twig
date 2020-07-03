@@ -1,0 +1,107 @@
+{% extends '/profile/base.html.twig' %}
+{% block main_content %}
+    <!-- Main content -->
+<div class="content-wrapper">
+    {% include '/components/page_header/page_header.html.twig' with {'seccion': 'Creación de proyectos' } %}
+    <!-- Content area -->
+    <div class="content">
+        <!-- Main charts -->
+        <div class="row">
+            <div class="col-xl-7">
+                <!-- Color options -->
+                <div class="mb-3 pt-2">
+                    <h6 class="mb-0 font-weight-semibold">
+                        {{ app.user.name }}
+                    </h6>
+
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <!-- Formulario creación de proyectos -->
+                        {{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+                            {{ form_row(form._token) }}
+                            {{ form_row(form.uuid) }}
+                                <div class="form-group form-group-feedback form-group-feedback-left">
+                                    <label class="col-form-label">{{ form_label(form.projectName) }}</label>
+                                    {{ form_widget(form.projectName) }}
+{#                                    <input type="text" class="form-control" id="name" name="name"  placeholder="Nombre del proyecto">#}
+                                    <div class="form-control-feedback">
+{#                                        <i class="icon-user text-muted"></i>#}
+                                    </div>
+                                </div>
+                                <div class="form-group form-group-feedback form-group-feedback-left">
+                                    <label class="col-form-label">{{ form_label(form.projectDescription) }}</label>
+                                    {{ form_widget(form.projectDescription) }}
+                                    <div class="form-control-feedback">
+                                    </div>
+                                </div>
+                                {% if error is defined and error %}
+                                    <div class="notification is-danger text-danger text-center">
+                                        {{ error }}
+                                    </div>
+                                {% endif %}
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="icon-new-tab mr-2"></i>Crear proyecto
+                                </button>
+                        {{ form_end(form) }}
+
+                        {#                        <form class="login-form" action="{{ path('/') }}" method="post">#}
+{#                            <div class="card mb-0">#}
+{#                                <div class="card-body">#}
+{#                                    <div class="text-center mb-3">#}
+{#                                        #}{#                                <img src="{{ asset('global_assets/images/Iphonedroid_Logo.png') }}" alt="logo" width="100%" height="100%">#}
+{#                                        <h5 class="mb-0">Acceso a tu cuenta</h5>#}
+{#                                        <span class="d-block text-muted">Introduce las credenciales</span>#}
+{#                                    </div>#}
+{#                                    <div class="form-group form-group-feedback form-group-feedback-left">#}
+{#                                        <input type="text" class="form-control" id="username" name="_email"  placeholder="Identificador">#}
+{#                                        <div class="form-control-feedback">#}
+{#                                            <i class="icon-user text-muted"></i>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                    <div class="form-group form-group-feedback form-group-feedback-left">#}
+{#                                        <input type="password" class="form-control"  id="password" name="_password" placeholder="Contraseña">#}
+{#                                        <div class="form-control-feedback">#}
+{#                                            <i class="icon-lock2 text-muted"></i>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                    {% if error is defined and error %}#}
+{#                                        <div class="notification is-danger text-danger text-center">#}
+{#                                            Se ha producido un error de autenticación.#}
+{#                                        </div>#}
+{#                                    {% endif %}#}
+{#                                    <div class="form-group">#}
+{#                                        <button type="submit" class="btn btn-primary btn-block">Acceso<i class="icon-circle-right2 ml-2"></i></button>#}
+{#                                    </div>#}
+{#                                    #}{#                            <div class="text-center">#}
+{#                                    #}{#                                <a href="login_password_recover.html">¿Se te olvidó la contraseña?</a>#}
+{#                                    #}{#                            </div>#}
+{#                                    <hr>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </form>#}
+                        <!-- /Formulario creación de proyectos -->
+                    </div>
+                </div>
+                <!-- /color options -->
+            </div>
+        </div>
+        <!-- /content area -->
+    </div>
+    <!-- /main content -->
+{#    {% include 'components/footer/footer.html.twig' only %}#}
+    {% endblock main_content %}
+
+
+{#            </div>#}
+
+{#            <!-- /content area -->#}
+{#            <!-- footer area -->#}
+
+{#            <!-- /footer area -->#}
+{#        </div>#}
+{#        <!-- /main content -->#}
+
+{#    </div>#}
+{#    <!-- /page content -->#}
+{#{% endblock %}#}

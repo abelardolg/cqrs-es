@@ -1,0 +1,24 @@
+services:
+    _defaults:
+        public: true
+        bind:
+          $elasticConfig: '%elastic%'
+
+    App\Tests\Infrastructure\Shared\Event\EventCollectorListener:
+      public: true
+      tags:
+          - { name: broadway.domain.event_listener }
+
+    App\Infrastructure\Shared\Event\Query\EventElasticRepository:
+      public: true
+      autowire: true
+
+    App\Infrastructure\Shared\Bus\Command\CommandBus:
+      public: true
+      arguments:
+        - '@messenger.bus.command'
+
+    App\Infrastructure\Shared\Bus\Query\QueryBus:
+      public: true
+      arguments:
+        - '@messenger.bus.query'

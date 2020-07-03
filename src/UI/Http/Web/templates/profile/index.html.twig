@@ -1,0 +1,58 @@
+{% extends '/profile/base.html.twig' %}
+
+{% block main_content %}
+<!-- Main content -->
+<div class="content-wrapper">
+    {{ include('/components/page_header/page_header.html.twig') }}
+    <!-- Content area -->
+    <div class="content">
+        <!-- Main charts -->
+        <div class="row">
+            <div class="col-xl-7">
+                <!-- Color options -->
+                <div class="mb-3 pt-2">
+                    <h6 class="mb-0 font-weight-semibold">
+                        {{ app.user.name }}
+                    </h6>
+                    <span class="text-muted d-block">Tus últimas tareas</span>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <!-- Line and border. Partial, empty -->
+                        <div class="card card-body border-top-blue">
+                            <div class="list-feed">
+                                <div class="list-feed-item border-warning-400">
+                                    Iniciaste la tarea <a href="#"> Creación del caso de uso Registro de Usuarios en la app Barlovento </a>
+                                </div>
+
+                                <div class="list-feed-item border-info-400">
+                                    Christopher Wallace te mandó una<a href="#"> tarea </a>para su revisión
+                                </div>
+
+                                <div class="list-feed-item border-pink-400">
+                                    Incidencia Ticket <strong>#43683</strong> creada por <a href="#">Victoria Wilson</a>
+                                </div>
+
+                                <div class="list-feed-item border-slate-600">
+                                    <a href="#">Bárbara Winston</a> te asinó una nueva tarea <strong> Elaboración documetnación técnica</strong>
+                                </div>
+
+                                <div class="list-feed-item border-teal-400">
+                                    Cerraste el ticket #4568
+                                </div>
+
+                                <div class="list-feed-item border-danger-400">
+                                    <strong>Chris Arney </strong> creó un nuevo ticket  <a href="#">#43136</a> y te lo asignó.
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /line and border. Partial, empty -->
+                    </div>
+                </div>
+                <!-- /color options -->
+            </div>
+        </div>
+        <!-- /content area -->
+    </div>
+    <!-- /main content -->
+{% endblock main_content %}

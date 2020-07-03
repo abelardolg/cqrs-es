@@ -1,0 +1,108 @@
+<!-- Main sidebar -->
+<div class="sidebar sidebar-dark sidebar-main sidebar-expand-md">
+
+    <!-- Sidebar mobile toggler -->
+    <div class="sidebar-mobile-toggler text-center">
+        <a href="#" class="sidebar-mobile-main-toggle">
+            <i class="icon-arrow-left8"></i>
+        </a>
+        Navigation
+        <a href="#" class="sidebar-mobile-expand">
+            <i class="icon-screen-full"></i>
+            <i class="icon-screen-normal"></i>
+        </a>
+    </div>
+    <!-- /sidebar mobile toggler -->
+
+
+    <!-- Sidebar content -->
+    <div class="sidebar-content">
+
+        <!-- User menu -->
+        <div class="sidebar-user">
+            <div class="card-body">
+                <div class="media">
+                    <div class="mr-3">
+                        <a href="#"><img src="{{ asset('global_assets/images/users/face24.jpg') }}" width="38" height="38" class="rounded-circle" alt=""></a>
+                    </div>
+
+                    <div class="media-body">
+                        <div class="media-title font-weight-semibold"> {{ app.user.name }}</div>
+                        <div class="font-size-xs opacity-50">
+                            <i class="icon-pin font-size-sm"></i> Gran Canaria, España
+                        </div>
+                    </div>
+
+                    <div class="ml-3 align-self-center">
+                        <a href="#" class="text-white"><i class="icon-cog3"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /user menu -->
+
+
+        <!-- Main navigation -->
+        <div class="card card-sidebar-mobile">
+            <ul class="nav nav-sidebar" data-nav-type="accordion">
+
+                <!-- Main -->
+                <li class="nav-item-header"><div class="text-uppercase font-size-xs line-height-xs">Principal</div> <i class="icon-menu" title="Main"></i></li>
+                <li class="nav-item">
+                    {#                        <a href="index.html" class="nav-link {% if app.request.attributes.get('_route') == 'home'%} active {% endif %}">#}
+                    <a href="#" class="nav-link ">
+                        <i class="icon-home4"></i>
+                        <span>
+									Panel de Control
+								</span>
+                    </a>
+                </li>
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link"><i class="icon-copy"></i> <span>Proyectos</span></a>
+
+                    <ul class="nav nav-group-sub" data-submenu-title="Layouts">
+                        <li class="nav-item"><a href="{{ path("get_projects_userID", {userID: "userID"}) }}" class="nav-link">Lista de mis proyectos</a></li>
+                        <li class="nav-item"><a href="detail_project" class="nav-link">Detalle de un proyecto</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link"><i class="icon-color-sampler"></i> <span>Tareas</span></a>
+
+                    <ul class="nav nav-group-sub" data-submenu-title="Themes">
+                        <li class="nav-item"><a href="get_overviewtasks_data" class="nav-link">Visión general</a></li>
+                        <li class="nav-item"><a href="update_tasks" class="nav-link">Actualizar tus tareas</a></li>
+                        <li class="nav-item"><a href="detail_tasks" class="nav-link">Detalle de tus tareas</a></li>
+                    </ul>
+                </li>
+
+                {% if is_granted('ROLE_USER') %}
+                    <li class="nav-item-header"><div class="text-uppercase font-size-xs line-height-xs">Administración</div> <i class="icon-menu" title="Main"></i></li>
+
+                    <li class="nav-item nav-item-submenu">
+                        <a href="#" class="nav-link"><i class="icon-copy"></i> <span>Proyectos</span></a>
+
+                        <ul class="nav nav-group-sub" data-submenu-title="AdminProjects">
+                            <li class="nav-item"><a href="update_project" class="nav-link disabled">Actualizar los datos de un proyecto<span class="badge bg-transparent align-self-center ml-auto">Próximamente</span></a></li>
+                            <li class="nav-item"><a href="{{ path("project_create") }}" class="nav-link">Creación de proyectos</a></li>
+                            <li class="nav-item"><a href="delete_project" class="nav-link">Dar de baja a un proyecto</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item nav-item-submenu">
+                        <a href="#" class="nav-link"><i class="icon-copy"></i> <span>Tareas</span></a>
+
+                        <ul class="nav nav-group-sub" data-submenu-title="AdminTasks">
+                            <li class="nav-item"><a href="create_tasks" class="nav-link">Creación de Tareas</a></li>
+                            <li class="nav-item"><a href="delete_tasks" class="nav-link">Borrar tareas</a></li>
+                        </ul>
+                    </li>
+                {% endif %}
+                <!-- /components -->
+        </div>
+        <!-- /main navigation -->
+
+    </div>
+    <!-- /sidebar content -->
+
+</div>
+
+<!-- /main sidebar -->

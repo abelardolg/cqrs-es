@@ -1,0 +1,69 @@
+{% extends '/signin/base.html.twig' %}
+{% block content %}
+    <!-- Page content -->
+    <div class="page-content">
+
+        <!-- Main content -->
+        <div class="content-wrapper">
+            <div class="text-center">
+                <h1> Os damos la bienvenida a </h1>
+                <img src="{{ asset('global_assets/images/Iphonedroid_Logo.png') }}" alt="logo" width="50%" height="75%">
+            </div>
+            <!-- Content area -->
+            <div class="content d-flex justify-content-center align-items-center">
+                <!-- Login form -->
+                <form class="login-form" action="{{ path('sign-up') }}" method="post">
+                    <div class="card mb-0">
+                        <div class="card-body">
+                            <div class="text-center mb-3">
+{#                                <img src="{{ asset('global_assets/images/Iphonedroid_Logo.png') }}" alt="logo" width="100%" height="100%">#}
+                                <h5 class="mb-0">Crea tu cuenta</h5>
+                                <span class="d-block text-muted">Introduce los siguientes datos</span>
+                            </div>
+                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                <input type="text" class="form-control"  id="nombre" name="nombre" placeholder="Tu nombre y apellidos" value="">
+                                <div class="form-control-feedback">
+                                    <i class="icon-user ext-muted"></i>
+                                </div>
+                            </div>
+                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                <input type="text" class="form-control" id="email" name="_email"  placeholder="Identificador">
+                                <div class="form-control-feedback">
+                                    <i class="icon-user text-muted"></i>
+                                </div>
+                            </div>
+                            <div class="form-group form-group-feedback form-group-feedback-left">
+                                <input type="password" class="form-control"  id="password" name="_password" placeholder="Contraseña">
+                                <div class="form-control-feedback">
+                                    <i class="icon-lock2 text-muted"></i>
+                                </div>
+                            </div>
+                            {% if error is defined and error %}
+                                <div class="notification is-danger text-danger text-center">
+                                    {{ error }}
+                                </div>
+                            {% endif %}
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary btn-block">Acceso<i class="icon-circle-right2 ml-2"></i></button>
+                            </div>
+{#                            <div class="text-center">#}
+{#                                <a href="login_password_recover.html">¿Se te olvidó la contraseña?</a>#}
+{#                            </div>#}
+                            <hr>
+                        </div>
+                    </div>
+                </form>
+                <!-- /login form -->
+
+            </div>
+
+            <!-- /content area -->
+            <!-- footer area -->
+            {% include 'components/footer/footer.html.twig' only %}
+            <!-- /footer area -->
+        </div>
+        <!-- /main content -->
+
+    </div>
+    <!-- /page content -->
+{% endblock %}

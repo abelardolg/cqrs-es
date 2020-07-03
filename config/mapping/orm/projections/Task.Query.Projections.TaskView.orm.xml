@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+    <entity name="App\Infrastructure\Task\Query\Projections\TaskView" table="tasks">
+        <id name="taskID" type="uuid_binary" column="task_id"/>
+        <field name="taskName" column="name" nullable="false" type="string" />
+        <field name="taskDescription" column="description" nullable="false" type="string" />
+        <field name="createdAt" column="created_at" type="datetime_immutable" />
+        <field name="updatedAt" column="updated_at" nullable="true" type="datetime_immutable" />
+        <one-to-one field="projectID" target-entity="App\Infrastructure\Project\Query\Projections\ProjectView">
+            <join-column name="project_id" referenced-column-name="project_id" />
+        </one-to-one>
+    </entity>
+</doctrine-mapping>
