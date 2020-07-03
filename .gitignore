@@ -50,5 +50,4 @@
 
 # Embedded web-server pid file
 /.web-server-pid
-
-/utils
+/.idea
