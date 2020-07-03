@@ -13,7 +13,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28692254-e3c9-44a8-9da0-f9e89e0793dc" name="Default Changelist" comment="" />
+    <list default="true" id="28692254-e3c9-44a8-9da0-f9e89e0793dc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -285,7 +288,7 @@
       <workItem from="1593696445486" duration="9000" />
       <workItem from="1593696481930" duration="6483000" />
       <workItem from="1593703041857" duration="1652000" />
-      <workItem from="1593760139718" duration="1150000" />
+      <workItem from="1593760139718" duration="2578000" />
     </task>
     <servers />
   </component>
@@ -350,11 +353,11 @@
       <screen x="74" y="35" width="1846" height="1045" />
     </state>
     <state x="862" y="346" width="981" height="954" key="dock-window-1/74.35.1846.1045@74.35.1846.1045" timestamp="1593599373708" />
-    <state x="728" y="120" width="1055" height="886" key="find.popup" timestamp="1593704093467">
+    <state x="728" y="120" width="1055" height="886" key="find.popup" timestamp="1593761328185">
       <screen x="74" y="35" width="1846" height="1045" />
     </state>
     <state x="0" y="27" width="1056" height="1053" key="find.popup/72.27.1848.1053@72.27.1848.1053" timestamp="1593337732830" />
-    <state x="728" y="120" width="1055" height="886" key="find.popup/74.35.1846.1045@74.35.1846.1045" timestamp="1593704093467" />
+    <state x="728" y="120" width="1055" height="886" key="find.popup/74.35.1846.1045@74.35.1846.1045" timestamp="1593761328185" />
     <state x="791" y="278" width="402" height="556" key="refactoring.ChangeSignatureDialog" timestamp="1593701428531">
       <screen x="74" y="35" width="1846" height="1045" />
     </state>
